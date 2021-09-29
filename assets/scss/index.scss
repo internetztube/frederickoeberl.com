@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Monaco, Consolas, Lucida Console, Andale Mono, monospace;
+  color: #fff;
+  background: #111;
+  min-height: 100%;
+  margin: 0;
+}
+
+#__nuxt,
+#__layout {
+  min-height: 100%;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
