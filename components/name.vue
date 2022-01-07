@@ -1,9 +1,11 @@
 <template>
   <h1 title="Frederic Köberl" class="name">
-    <no-ssr>
-      Fred<span class="default">eric</span>
-      K<span class="default">ö</span><span class="hidden">oe</span>berl
-    </no-ssr>
+    <span data-nosnippet>
+      <no-ssr>
+        Fred<span class="default">eric</span>
+        K<span class="default">ö</span><span class="hidden">oe</span>berl
+      </no-ssr>
+    </span>
     <span v-show="!init">Frederic Köberl</span>
   </h1>
 </template>
