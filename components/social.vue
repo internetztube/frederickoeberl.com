@@ -2,7 +2,7 @@
   <p>
     <i>Find me on</i><br>
     <a rel="me" href="https://pounced-on.me/@internetztube" target="_blank">mastodon</a>,
-    <a href="https://twitter.com/internetztube" target="_blank">twitter</a>,
+    <a href="https://x.com/internetztube" target="_blank">x</a>,
     <a href="https://www.instagram.com/internetztube/" target="_blank">instagram</a>,
     <br>
 
