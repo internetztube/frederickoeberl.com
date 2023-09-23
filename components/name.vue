@@ -1,62 +1,57 @@
 <template>
-  <h1 title="Frederic Köberl" class="name">
+    <h1 title="Frederic Köberl" class="name">
     <span data-nosnippet>
-      <no-ssr>
+      <client-only>
         Fred<span class="default">eric</span>
         K<span class="default">ö</span><span class="hidden">oe</span>berl
-      </no-ssr>
+      </client-only>
     </span>
-    <span v-show="!init">Frederic Köberl</span>
-  </h1>
+        <span v-show="!init">Frederic Köberl</span>
+    </h1>
 </template>
 
-<script>
-export default {
-  data () {
-    return { init: false }
-  },
-  mounted () {
-    this.init = true
-  }
-}
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const init = ref(false);
+onMounted(() => {
+    init.value = true;
+});
 </script>
 
-<style lang="scss">
-$animation-duration: 0.5s;
-
+<style>
 .name {
-  margin: -40px;
-  padding: 60px 40px 40px 40px;
+    margin: -40px;
+    padding: 60px 40px 40px 40px;
+    --animation-duration: 0.5s;
+}
 
-  .default,
-  .hidden {
+.name .default,
+.name .hidden {
     display: inline-block;
-    transition: font-size $animation-duration, opacity $animation-duration;
-  }
+    transition: font-size var(--animation-duration), opacity var(--animation-duration);
+}
 
-  .default {
+.name .default {
     user-select: all;
     opacity: 1;
-  }
+}
 
-  .hidden {
+.name .hidden {
     font-size: 0;
     user-select: none;
     opacity: 0;
-  }
+}
 
-  &:hover {
-    .default {
-      font-size: 0;
-      user-select: none;
-      opacity: 0;
-    }
+.name:hover .default {
+    font-size: 0;
+    user-select: none;
+    opacity: 0;
+}
 
-    .hidden {
-      font-size: inherit;
-      user-select: all;
-      opacity: 1;
-    }
-  }
+.name:hover .hidden {
+    font-size: inherit;
+    user-select: all;
+    opacity: 1;
 }
 </style>
