@@ -8,7 +8,7 @@
             <Projects class="content-block"/>
         </section>
         <picture class="background" :style="`--primary: ${colors.primary}; --secondary: ${colors.secondary}`">
-            <img src="https://source.unsplash.com/user/internetztube?1" alt="random Unsplash photo">
+            <img src="https://unsplash.internetztube.net/internetztube/full" alt="random Unsplash photo">
         </picture>
     </main>
 </template>
